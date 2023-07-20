@@ -7,40 +7,132 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Results summary component</title>
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(228, 45%, 44%); }    
+    .resultColumn {
+        background-image: linear-gradient(#6441fd, #342eea);
+        border-bottom-left-radius: 2em;
+        border-bottom-right-radius: 2em;
+    }
+    @media (min-width: 768px) {    
+      .resultColumn {
+        border-radius: 2em;
+      }
+    }
+    .titleHeader {
+      color: #9c88ff;
+    }
+    .scoreNumberContainer {
+      border-radius: 50%;
+      width: 9rem;
+      height: 9rem;
+      background-image: linear-gradient(#342eea, #6441fd);
+    }
+    .scoreNumber {
+      font-size: 5rem;
+      height: 6rem;
+      color: white;
+    }
+    .totalNumber {
+      color: white;
+    }
+    .resultColumn p {
+       font-size: .75rem;
+       color: #a6a2ff;
+    }
+    .subjectiveScoreValue {
+      color: white;
+    }
+    .summaryTitleMain {
+      font-weight: bold;
+      text-align: left;
+    }
+    .summaryMetricAmount {
+      font-weight: bold;
+    }
+    .summaryTitle {
+      text-align: left;
+      padding-left: .75rem;
+    }
+    .summaryTitleReaction {
+      color: #d0707b;
+    }
+    .summaryTitleMemory {
+      color: #ecc87a;
+    }
+    .summaryTitleVerbal {
+      color: #2ca788;
+    }
+    .summaryTitleVisual {
+      color: #3942ab;
+    }
+    .continueButton {
+      width: 35%;
+      border-radius: 1.75rem;
+    }
+    body {
+       text-align: center;
+    }
   </style>
 </head>
 <body>
-  Your Result
-  76
-  of 100
+  <div class="container">
+    <div class="row">
+      <div class="col-md mx-auto resultColumn">
+        <div class="titleHeader">Your Result</div>
+        <div class="scoreNumberContainer mx-auto">
+          <div class="scoreNumber">76</div>
+          <div class="totalNumber">of 100</div>
+        </div>
+        <div class="subjectiveScoreValue">Great</div>
+        <p>You scored higher than 65% of the people who have taken these tests.</p>
+      </div>
 
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
+      <div class="col-md mx-auto summaryColumn">
+          <div class="summaryTitleMain">Summary</div>
 
-  Reaction
-  80 / 100
+          <div class="row summaryMetrics">
+            
+            <div class="row summaryMetric">
+              <div class="col summaryTitle summaryTitleReaction"><img src="assets/images/icon-reaction.svg" />Reaction</div>
+              <div class="col">
+                <span class="summaryMetricAmount">80</span> / 100
+              </div>
+            </div>
 
-  Memory
-  92 / 100
+            <div class="row summaryMetric">
+              <div class="col summaryTitle summaryTitleMemory"><img src="assets/images/icon-memory.svg" />Memory</div>
+              <div class="col">
+                <span class="summaryMetricAmount">92</span> / 100
+              </div>
+            </div>
+            
+            <div class="row summaryMetric">
+             <div class="col summaryTitle summaryTitleVerbal"><img src="assets/images/icon-verbal.svg" />Verbal</div>
+             <div class="col">
+               <span class="summaryMetricAmount">61</span> / 100
+             </div>
+            </div>
+            <div class="row summaryMetric">
+              <div class="col summaryTitle summaryTitleVisual"><img src="assets/images/icon-visual.svg" />Visual</div>
+              <div class="col">
+                <span class="summaryMetricAmount">72</span> / 100
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-secondary continueButton">Continue</button>
+    </div>
 
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    <div class="row">
+      <div class="col mx-auto">
+        <div class="attribution">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="github.com/michaelhiiva">Michael Hiiva</a>.
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
